@@ -11,7 +11,7 @@ const Header = ({isTVShow}) => {
           <Styled.Logo><SiThemoviedatabase/></Styled.Logo>
         </Styled.Item> 
         <Styled.Item>
-          <Styled.NavLink>Home</Styled.NavLink>
+          <Styled.NavLink to="/">Home</Styled.NavLink>
         </Styled.Item>  
         <Styled.Item>
         <Styled.NavLink to="/">Movies</Styled.NavLink>

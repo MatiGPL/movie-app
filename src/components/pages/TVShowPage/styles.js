@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1600px;
-  margin: 50px auto;
+  margin: 0px auto;
+  padding: 30px 0;
   width: 95%;
-  color: white;
+  color: ${props => props.theme.colors.textColor};
   display: flex;
   flex-direction: row;
+  min-height: 70vh;
   
   img {
     display: flex;
@@ -53,14 +55,11 @@ export const ContainerRightBottom = styled.div`
   height: 10%;
   /* border: 1px solid green; */
   justify-self: flex-end;
-
   p {
     color: inherit;
     font-weight: inherit;
     text-decoration: none;
   }
-  
-
   svg {
     scale: 1.2;
   }

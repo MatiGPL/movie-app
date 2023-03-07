@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import MovieCard from "../../Movies/MovieCard/MovieCard";
-import Header from '../../Header/Header';
+import MainTemplate from '../../templates/MainTemplate/MainTemplate';
 import * as Styled from "./styles";
 
 const SearchPage = () => {
@@ -30,11 +30,8 @@ const SearchPage = () => {
     setQuery(e.target.value);
   };
 
-  console.log(results)
-  
   return (
-    <>
-    <Header/>
+    <MainTemplate>
     <Styled.Container>
       <Styled.Header>
         <h2>Search movie </h2>
@@ -59,9 +56,9 @@ const SearchPage = () => {
           ))
         )}
       </Styled.Results>
-      
     </Styled.Container>
-    </>
+  
+    </MainTemplate>
   );
 };
 

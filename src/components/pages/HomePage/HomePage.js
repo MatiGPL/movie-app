@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useMoviesData } from "../../../hooks/useMoviesData";
-import Header from '../../Header/Header';
 import FeaturedMovieCard from '../../Movies/FeaturedMovieCard/FeaturedMovieCard';
 import Movies from '../../Movies/Movies/Movies';
+import MainTemplate from '../../templates/MainTemplate/MainTemplate';
 
 const HomePage = (isTVShow) => {
 
@@ -26,14 +26,12 @@ const HomePage = (isTVShow) => {
   } 
  
   return (
-    <div>
-      <Header/>
-        <Movies title="Popular Movies" movies={popular?.results}/>
-        {featured ? <FeaturedMovieCard title="Featured" featured={featured}/> : <p>Loading</p>} 
-        <Movies title="Top Rated Movies" movies={top?.results}/>
-        <Movies title="Upcoming Movies" movies={upcoming?.results}/>
-      
-    </div>
+    <MainTemplate>
+      <Movies title="Popular Movies" movies={popular?.results}/>
+      {featured ? <FeaturedMovieCard title="Featured" featured={featured}/> : <p>Loading</p>} 
+      <Movies title="Top Rated Movies" movies={top?.results}/>
+      <Movies title="Upcoming Movies" movies={upcoming?.results}/>
+    </MainTemplate>
   )
 }
 

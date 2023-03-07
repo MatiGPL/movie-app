@@ -1,9 +1,9 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useMoviesData } from '../../../hooks/useMoviesData';
-import Header from '../../Header/Header';
 import * as Styled from './styles';
 import { AiFillStar } from 'react-icons/ai';
+import MainTemplate from '../../templates/MainTemplate/MainTemplate';
 
 const MoviePage = () => {
   const params = useParams();
@@ -11,8 +11,7 @@ const MoviePage = () => {
   if(!movie)return
   
   return (
-    <>
-    <Header/>
+    <MainTemplate>
     <Styled.Container>
       <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title}/>
       <Styled.ContainerRight>
@@ -26,7 +25,7 @@ const MoviePage = () => {
       </Styled.ContainerRightBottom>
       </Styled.ContainerRight>
     </Styled.Container>
-    </>
+    </MainTemplate>
   )
 }
 

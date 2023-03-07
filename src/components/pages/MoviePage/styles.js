@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   max-width: 1600px;
-  margin: 50px auto;
+  margin: 0px auto;
+  padding: 30px 0;
   width: 95%;
-  color: white;
+  color: ${props => props.theme.colors.textColor};
   display: flex;
   flex-direction: row;
+  min-height: auto;
   
   img {
     display: flex;
@@ -15,6 +17,7 @@ export const Container = styled.div`
     object-fit: cover;
     min-width: 300px;
     box-shadow: -10px 10px 30px grey;
+
   }
 `
 export const ContainerRight = styled.div`

@@ -11,13 +11,13 @@ export const Wrapper = styled.article`
   }
   & > h3 {
     display: block;
-    margin-top: 0;
+    margin-top: 30px;
     text-align: center;
-    color: white;
+    color: ${props => props.theme.colors.textColor};
     font-size: 1.2rem;
     text-decoration: none;
     a:link {
-  text-decoration: none;
+      text-decoration: none;
 }
 
     & span {
@@ -34,21 +34,21 @@ export const BoxRelease = styled.div`
    position: absolute;
    top: 13px;
    right: 13px;
-   background-color: rgba(255, 255, 255, 0.5);
+   background-color: rgb(181, 181, 181);
    padding: 8px;
    border-radius: 12px;
    font-weight: 700;
    font-size: 0.8rem;
-   color: white;
+   color: black;
 `
 export const BoxRating = styled.div`
    position: absolute;
    bottom: 65px;
    right: 13px;
-   background-color: rgba(255, 255, 255, 0.5);
+   background-color: rgb(181, 181, 181);
    padding: 8px;
    border-radius: 12px;
    font-weight: 700;
    font-size: 0.8rem;
-   color: white;
+   color: black;
 `

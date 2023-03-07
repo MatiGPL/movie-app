@@ -1,19 +1,18 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import { useMoviesData } from '../../../hooks/useMoviesData';
-import Header from '../../Header/Header';
 import * as Styled from './styles';
 import { AiFillStar } from 'react-icons/ai';
 import { Link } from 'react-router-dom';
+import MainTemplate from '../../templates/MainTemplate/MainTemplate';
 
 const MoviePage = ({isTVShow}) => {
   const params = useParams();
   const {movies:movie,loading,error}= useMoviesData(`tv/${params.id}`);
   if(!movie)return
-  console.log(movie);
+  
   return (
-    <>
-    <Header/>
+    <MainTemplate>
     <Styled.Container>
       <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.original_name}/>
       <Styled.ContainerRight>
@@ -22,7 +21,7 @@ const MoviePage = ({isTVShow}) => {
       <h3>{movie.tagline}</h3>
       
       <article>{movie.overview}</article>
-      <Link style={{textDecoration:"none"}} to={movie.homepage}>
+      <Link style={{textDecoration:"none"}} to={movie.homepage} target="_blank">
       <p>TV Series homepage</p>
       </Link>
       <Styled.ContainerRightBottom>
@@ -33,7 +32,7 @@ const MoviePage = ({isTVShow}) => {
       </Styled.ContainerRightBottom>
       </Styled.ContainerRight>
     </Styled.Container>
-    </>
+    </MainTemplate>
   )
 }
 

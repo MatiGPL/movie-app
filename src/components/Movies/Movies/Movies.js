@@ -13,7 +13,7 @@ const Movies = ({movies, title, isTVShow}) => {
   
   return (
     <Styled.Wrapper>
-    {isTVShow ? <h1>TV SHow</h1> : <h1>Movie</h1>}
+  
     <Styled.Title>{title}</Styled.Title>
     <Swiper 
       className="mySwiper" 
